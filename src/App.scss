@@ -6,12 +6,11 @@
     box-sizing: border-box;
 }
 
-/* Container */
-
 .intro {
+    position: relative;
     padding: 100px 0 0 0;
     background: #aec670;
-    .container {
+    &__container {
         width: 100%;
         max-width: 1270px;
         height: 1000px;
@@ -26,9 +25,9 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 1;
 
-    .container {
+    &__container {
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -42,7 +41,7 @@
 
         .inner {
             display: flex;
-            .info {
+            &__info {
                 padding: 22px 25px;
                 .title {
                     margin-bottom: 10px;
@@ -59,10 +58,9 @@
             display: flex;
             align-items: center;
 
-            .link {
+            &__cart {
                 text-decoration: none;
-            }
-            .cart {
+                color: #000000;
                 width: 200px;
                 display: flex;
                 align-items: center;
@@ -74,10 +72,63 @@
                     margin: 15px auto;
                 }
             }
-            .avatar {
+
+            &__cart:hover {
+                background: #778d45;
+            }
+            &__avatar {
                 margin: auto;
                 margin-left: 20px;
             }
         }
+    }
+}
+
+.slider {
+    position: absolute;
+    top: 220px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: 400px;
+    display: flex;
+    align-items: center;
+
+    &__container {
+        position: relative;
+        margin: auto;
+        width: 100%;
+        max-width: 960px;
+        height: 323px;
+        max-width: 960px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__item {
+        width: 890px;
+        max-width: 100%;
+        height: 323px;
+        border-radius: 45px;
+        background-color: #f44336;
+    }
+    &__btn {
+        width: 70px;
+        height: 70px;
+        background: #d9d9d9;
+        opacity: 0.5;
+        border-radius: 50%;
+        border: #000000 solid 1px;
+        position: absolute;
+        z-index: 2;
+    }
+    &__btn:hover {
+        opacity: 0.75;
+    }
+    .btn_prev {
+        left: 0;
+    }
+    .btn_next {
+        right: 0;
     }
 }
