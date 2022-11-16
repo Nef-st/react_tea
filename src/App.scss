@@ -9,13 +9,11 @@
 }
 
 .intro {
-    position: relative;
     padding: 100px 0 0 0;
     background: #aec670;
     &__container {
         width: 100%;
         max-width: 1270px;
-        height: 1000px;
         background: #ffffff;
         border-radius: 47px 47px 0 0;
         margin: 0 auto;
@@ -23,12 +21,6 @@
 }
 
 .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-
     &__container {
         display: flex;
         justify-content: space-between;
@@ -69,10 +61,9 @@
         border-radius: 27px;
         padding: 0 15px;
         transition: 0.25s linear;
-
-        .amount {
-            margin: 15px auto;
-        }
+    }
+    &__price {
+        margin: 15px auto;
     }
 
     &__cart:hover {
@@ -85,11 +76,6 @@
 }
 
 .slider {
-    position: absolute;
-    top: 220px;
-    left: 0;
-    right: 0;
-    z-index: 1;
     height: 400px;
     display: flex;
     align-items: center;
@@ -135,11 +121,6 @@
 }
 
 .nav {
-    position: absolute;
-    top: 620px;
-    left: 0;
-    right: 0;
-    z-index: 1;
     text-align: center;
 
     &__container {
@@ -147,7 +128,7 @@
         margin: 0 auto;
         width: 100%;
         max-width: 1270px;
-        height: 97px;
+        height: 100px;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -164,12 +145,17 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 148px;
+        width: 100%;
+        max-width: 148px;
         height: 50px;
         background: #aec670;
         border-right: #000 solid 1px;
+        transition: 0.1s linear;
 
         &_active {
+            background: #778d45;
+        }
+        &:active {
             background: #778d45;
         }
     }
@@ -188,6 +174,8 @@
         height: 55px;
         border: 5px solid rgba(0, 0, 0, 0.5);
         border-radius: 30px;
+
+        margin-left: 10px;
     }
     &__input {
         margin: 10px 20px;
@@ -199,5 +187,91 @@
     }
     &__icon {
         height: 100%;
+    }
+}
+
+.main {
+    &__container {
+        position: relative;
+        margin: 0 auto;
+        padding: 40px;
+        width: 100%;
+        max-width: 1270px;
+        height: 100%;
+    }
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__item {
+        width: 275px;
+        height: 400px;
+        margin-bottom: 30px;
+        padding: 20px;
+        border: #000 solid 1px;
+        border-radius: 20px;
+    }
+
+    &__grade {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    &__name {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    &__bar {
+        display: flex;
+        position: relative;
+    }
+
+    &__price {
+        margin: 10px 0;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    &__amount {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 150px;
+        height: 37px;
+        border: 0.5px solid rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        z-index: 1;
+
+        button {
+            width: 37px;
+            height: 37px;
+            background: rgba(0, 0, 0, 0);
+            border: none;
+            z-index: 0;
+            cursor: pointer;
+        }
+    }
+
+    &__cart {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 65px;
+        height: 65px;
+
+        border: none;
+        border-radius: 10px;
+        background: rgba(174, 192, 154, 0.75);
+
+        img {
+            width: 65px;
+            height: 65px;
+        }
     }
 }
