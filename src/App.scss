@@ -195,6 +195,7 @@
         position: relative;
         margin: 0 auto;
         padding: 40px;
+        padding-bottom: 0;
         width: 100%;
         max-width: 1270px;
         height: 100%;
@@ -273,5 +274,23 @@
             width: 65px;
             height: 65px;
         }
+    }
+}
+
+.footer {
+    &__container {
+        width: 1260px;
+        height: 46px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+    }
+    &__context {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+
+        color: rgba(0, 0, 0, 0.5);
+        margin: 0 auto;
     }
 }

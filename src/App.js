@@ -298,6 +298,12 @@ function App() {
                             </div>
                         </div>
                     </div>
+
+                    <footer className="footer">
+                        <div className="footer__container">
+                            <p className="footer__context">Created by Yoni Holly</p>
+                        </div>
+                    </footer>
                 </div>
             </div>
         </div>
